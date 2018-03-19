@@ -11,8 +11,8 @@ from lib.tracker import Tracker
 def blocking_exit(stdscr):
     stdscr.addstr('To proceed press "BACKSPACE" key...', curses.color_pair(3))
     stdscr.refresh()
-    while True:
-        print(stdscr.getkey())
+    while 'KEY_BACKSPACE' != stdscr.getkey():
+        pass
 
 
 def main(content, repeats):
